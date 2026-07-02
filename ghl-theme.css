@@ -1,0 +1,140 @@
+/* -- Start GHL Style CSS -- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap');
+
+@import url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/ghlstyle-d-custom-theme.css');
+
+/* Icon Font System */
+@font-face {
+  font-family: 'icomoon';
+  src: url('/ghl-tool/core/style-core/fonts/icomoon.eot');
+  src: url('/ghl-tool/core/style-core/fonts/icomoon.eot') format('embedded-opentype'),
+       url('/ghl-tool/core/style-core/fonts/icomoon.ttf') format('truetype'),
+       url('/ghl-tool/core/style-core/fonts/icomoon.woff') format('woff'),
+       url('/ghl-tool/core/style-core/fonts/icomoon.svg') format('svg'),
+       url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Layout:before { content: "\e906"; }
+.icon-Bell:before { content: "\e900"; }
+.icon-CalendarDots:before { content: "\e901"; }
+.icon-CaretCircleRight:before { content: "\e902"; }
+.icon-downArrow:before { content: "\e903"; }
+.icon-flash:before { content: "\e904"; }
+.icon-GearSix:before { content: "\e905"; }
+.icon-MapPinArea:before { content: "\e907"; }
+.icon-menuDott:before { content: "\e908"; }
+.icon-Pen:before { content: "\e909"; }
+.icon-Phone:before { content: "\e90a"; }
+.icon-RightArrow:before { content: "\e90b"; }
+.icon-search:before { content: "\e90c"; }
+.icon-SlidersHorizontal:before { content: "\e90d"; }
+.icon-updownArrow:before { content: "\e90e"; }
+
+/* Ensure icon font is not overridden by global font rules */
+.GHL-Side-Menu-Wrapper [class^="icon-"],
+.GHL-Side-Menu-Wrapper [class*=" icon-"],
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+}
+
+
+/* Typography System - Font Family Application */
+* {
+    font-family: var(--app-font-family, 'Montserrat', sans-serif) !important;
+}
+
+.GHL-Side-Menu-Wrapper *,
+.GHL-Side-Menu-Wrapper span,
+.GHL-Side-Menu-Wrapper a,
+.GHL-Side-Menu-Wrapper div,
+.GHL-Side-Menu-Wrapper li,
+.GHL-Side-Menu-Nav *,
+.menu-item *,
+.desktop--12-682 .GHL-Side-Menu-Wrapper *,
+.desktop--12-682 .menu-item *,
+.desktop--12-682 li *,
+[class*="menu-"],
+[class*="sidebar-"],
+[class*="GHL-"],
+button, input, select, textarea, label, span, div, p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--app-font-family, 'Montserrat', sans-serif) !important;
+}
+
+:root {
+  --brand-logo: url(/assets/Dark-Logo.svg);
+  --brand-primary-color: #2b2d42;
+  --brand-secondary-color: #e8e8e8;
+  --brand-acent-color: #42476b;
+  --app-font-family: Poppins;
+  --ghl-topbar-color: #00183c;
+  --ghl-sidebar-color: #00183c;
+  --menu-hover-color: #68b7f0;
+  --menu-active-color: #68b7f0;
+  --sidebar-bottom-toggle: #68b7f0;
+  --ghl-widgets-color: #00183c;
+  --ghl-widgets-bg-color: #ffffff;
+  --ghl-topbar-text-color: #ffffff;
+  --menu-text-color: #ffffff;
+  --ghl-dashboard-icon-color: #83878f;
+  --ghl-widgets-text-color: #ffffff;
+  --ghl-widgets-icon-color: #ffffff;
+  --ghl-topbar-icon-color: #ffffff;
+  --Launch-Pad-Text: "Launch Pad";
+  --Dashboard-Text: "Dashboard";
+  --Conversations-Text: "Conversations";
+  --Calendar-Text: "Calendar";
+  --Contacts-Text: "Contacts";
+  --Opportunities-Text: "Opportunities";
+  --Payments-Text: "Payments";
+  --AI-Agents-Text: "AI Agents";
+  --Marketing-Text: "Marketing";
+  --Automations-Text: "Automations";
+  --Sites-Text: "Sites";
+  --Memberships-Text: "Memberships";
+  --Media-Storage-Text: "Media Storage";
+  --Reputation-Text: "Reputation";
+  --Reporting-Text: "Reporting";
+  --App-Marketplace-Text: "App Marketplace";
+  --Mobile-App-Text: "Mobile App";
+  --Settings-Text: "Settings";
+  --launch-pad-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/RocketLaunch_tnxjuq.png);
+  --dashboard-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/ChartDonut_xvomxc.png);
+  --conversations-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Chats_evuom2.png);
+  --calendars-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/CalendarDots_l5tpxr.png);
+  --contacts-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/IdentificationCard_aq9t7m.png);
+  --opportunities-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/HandCoins_hd3giq.png);
+  --payments-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/CurrencyDollarSimple_p2lp03.png);
+  --ai-agents-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745638645/AI_Agents_b9zrtr.png);
+  --marketing-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Megaphone_ywe4yq.png);
+  --automations-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/GearFine_muf3ps.png);
+  --sites-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/Browser_jbi5vh.png);
+  --memberships-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/Certificate_iyrcno.png);
+  --media-storage-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/ImagesSquare_wghzea.png);
+  --reputation-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/ListStar_swgiix.png);
+  --reporting-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/ChartBar_vpzouh.png);
+  --app-marketplace-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/SquaresFour_tdk36i.png);
+  --mobile-app-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/DeviceMobileCamera_q526gh.png);
+  --settings-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/ToggleRight_k50xms.png);
+  --icon-dialer: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Phone_jnm2yw.png);
+  --icon-activitie: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/Bell_cczvh7.png);
+  --icon-help: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/Question_sh2vk0.png);
+  --icon-canny-logs: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/GearSix_blhogp.png);
+}
+
+/* -- End GHL Style CSS -- */
