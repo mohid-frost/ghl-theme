@@ -1,501 +1,352 @@
 /* =========================================================
-   OTTAWA GARAGE DOORS & OPENERS
-   GoHighLevel / AI Dashboard Custom Theme
+   OTTAWA GARAGE DOORS — GHL UI FIXES
+   ADD THIS AT THE VERY BOTTOM OF THE CSS FILE
    ========================================================= */
-
-/* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
-@import url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/ghlstyle-d-custom-theme.css');
 
 
 /* =========================================================
-   ICON FONT
+   1. SIDEBAR — FORCE OTTAWA NAVY
    ========================================================= */
 
-@font-face {
-  font-family: 'icomoon';
-  src: url('/ghl-tool/core/style-core/fonts/icomoon.eot');
-  src: url('/ghl-tool/core/style-core/fonts/icomoon.eot') format('embedded-opentype'),
-       url('/ghl-tool/core/style-core/fonts/icomoon.ttf') format('truetype'),
-       url('/ghl-tool/core/style-core/fonts/icomoon.woff') format('woff'),
-       url('/ghl-tool/core/style-core/fonts/icomoon.svg') format('svg'),
-       url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/fonts/icomoon.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+#sidebar-v2,
+.sidebar-v2,
+.hl_nav-header,
+.hl_nav-menu,
+.hl_nav-settings,
+aside[class*="sidebar"],
+nav[class*="sidebar"] {
+    background: #0A4267 !important;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/* Sidebar text */
+
+#sidebar-v2 a,
+#sidebar-v2 span,
+#sidebar-v2 p,
+#sidebar-v2 div,
+.sidebar-v2 a,
+.sidebar-v2 span,
+.hl_nav-menu a,
+.hl_nav-menu span {
+    color: #DCEAF3 !important;
 }
 
-.icon-Layout:before { content: "\e906"; }
-.icon-Bell:before { content: "\e900"; }
-.icon-CalendarDots:before { content: "\e901"; }
-.icon-CaretCircleRight:before { content: "\e902"; }
-.icon-downArrow:before { content: "\e903"; }
-.icon-flash:before { content: "\e904"; }
-.icon-GearSix:before { content: "\e905"; }
-.icon-MapPinArea:before { content: "\e907"; }
-.icon-menuDott:before { content: "\e908"; }
-.icon-Pen:before { content: "\e909"; }
-.icon-Phone:before { content: "\e90a"; }
-.icon-RightArrow:before { content: "\e90b"; }
-.icon-search:before { content: "\e90c"; }
-.icon-SlidersHorizontal:before { content: "\e90d"; }
-.icon-updownArrow:before { content: "\e90e"; }
 
-.GHL-Side-Menu-Wrapper [class^="icon-"],
-.GHL-Side-Menu-Wrapper [class*=" icon-"],
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'icomoon' !important;
+/* Menu icons */
+
+#sidebar-v2 svg,
+.sidebar-v2 svg,
+.hl_nav-menu svg {
+    color: #C9DFEC !important;
+    fill: currentColor;
 }
 
 
 /* =========================================================
-   OTTAWA GARAGE DOORS BRAND VARIABLES
+   2. SIDEBAR HOVER
    ========================================================= */
 
-:root {
-
-  /* LOGO */
-  --brand-logo: url("https://assets.cdn.filesafe.space/4yJrZN5BDbV5Nbimq40T/media/6aa16e2b9416bfd5312a5305.png");
-
-  /* Main Brand Colors */
-  --ottawa-navy: #07365B;
-  --ottawa-dark-navy: #052B49;
-  --ottawa-blue: #176AA3;
-  --ottawa-light-blue: #2D8AC4;
-
-  --ottawa-orange: #F58220;
-  --ottawa-orange-hover: #E56F0A;
-  --ottawa-orange-light: #FFF1E4;
-
-  --ottawa-white: #FFFFFF;
-  --ottawa-bg: #F4F7FA;
-  --ottawa-border: #E3EAF0;
-  --ottawa-text: #102A43;
-  --ottawa-muted: #6B7C8F;
-
-  /* Theme Variables */
-  --brand-primary-color: #07365B;
-  --brand-secondary-color: #176AA3;
-  --brand-acent-color: #F58220;
-
-  --app-font-family: Montserrat;
-
-  /* Top Bar */
-  --ghl-topbar-color: #FFFFFF;
-  --ghl-topbar-text-color: #07365B;
-  --ghl-topbar-icon-color: #176AA3;
-
-  /* Sidebar */
-  --ghl-sidebar-color: #07365B;
-  --menu-hover-color: #124E78;
-  --menu-active-color: #F58220;
-  --sidebar-bottom-toggle: #124E78;
-  --menu-text-color: #FFFFFF;
-
-  /* Widgets */
-  --ghl-widgets-color: #07365B;
-  --ghl-widgets-bg-color: #FFFFFF;
-  --ghl-widgets-text-color: #102A43;
-  --ghl-widgets-icon-color: #176AA3;
-  --ghl-dashboard-icon-color: #176AA3;
-
-
-  /* Menu Text */
-  --Launch-Pad-Text: "Launch Pad";
-  --Dashboard-Text: "Dashboard";
-  --Conversations-Text: "Conversations";
-  --Calendar-Text: "Calendar";
-  --Contacts-Text: "Contacts";
-  --Opportunities-Text: "Opportunities";
-  --Payments-Text: "Payments";
-  --AI-Agents-Text: "AI Agents";
-  --Marketing-Text: "Marketing";
-  --Automations-Text: "Automations";
-  --Sites-Text: "Sites";
-  --Memberships-Text: "Memberships";
-  --Media-Storage-Text: "Media Storage";
-  --Reputation-Text: "Reputation";
-  --Reporting-Text: "Reporting";
-  --App-Marketplace-Text: "App Marketplace";
-  --Mobile-App-Text: "Mobile App";
-  --Settings-Text: "Settings";
-
-
-  /* Icons */
-  --launch-pad-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/RocketLaunch_tnxjuq.png);
-  --dashboard-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/ChartDonut_xvomxc.png);
-  --conversations-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Chats_evuom2.png);
-  --calendars-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/CalendarDots_l5tpxr.png);
-  --contacts-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/IdentificationCard_aq9t7m.png);
-  --opportunities-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/HandCoins_hd3giq.png);
-  --payments-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/CurrencyDollarSimple_p2lp03.png);
-  --ai-agents-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745638645/AI_Agents_b9zrtr.png);
-  --marketing-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Megaphone_ywe4yq.png);
-  --automations-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/GearFine_muf3ps.png);
-  --sites-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/Browser_jbi5vh.png);
-  --memberships-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/Certificate_iyrcno.png);
-  --media-storage-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/ImagesSquare_wghzea.png);
-  --reputation-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/ListStar_swgiix.png);
-  --reporting-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/ChartBar_vpzouh.png);
-  --app-marketplace-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/SquaresFour_tdk36i.png);
-  --mobile-app-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/DeviceMobileCamera_q526gh.png);
-  --settings-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/ToggleRight_k50xms.png);
-  --icon-dialer: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Phone_jnm2yw.png);
-  --icon-activitie: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/Bell_cczvh7.png);
-  --icon-help: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/Question_sh2vk0.png);
-  --icon-canny-logs: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/GearSix_blhogp.png);
+#sidebar-v2 a:hover,
+.sidebar-v2 a:hover,
+.hl_nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.09) !important;
+    color: #FFFFFF !important;
+    border-radius: 6px !important;
 }
 
 
 /* =========================================================
-   TYPOGRAPHY
+   3. ACTIVE MENU — ORANGE
    ========================================================= */
 
-* {
-  font-family: var(--app-font-family, 'Montserrat', sans-serif) !important;
+#sidebar-v2 .active,
+#sidebar-v2 a.active,
+#sidebar-v2 .router-link-active,
+.sidebar-v2 .active,
+.sidebar-v2 .router-link-active,
+.hl_nav-menu .active,
+.hl_nav-menu .router-link-active {
+    background: #F58220 !important;
+    color: #FFFFFF !important;
 }
 
-.GHL-Side-Menu-Wrapper *,
-.GHL-Side-Menu-Wrapper span,
-.GHL-Side-Menu-Wrapper a,
-.GHL-Side-Menu-Wrapper div,
-.GHL-Side-Menu-Wrapper li,
-.GHL-Side-Menu-Nav *,
-.menu-item *,
-.desktop--12-682 .GHL-Side-Menu-Wrapper *,
-.desktop--12-682 .menu-item *,
-.desktop--12-682 li *,
-[class*="menu-"],
-[class*="sidebar-"],
-[class*="GHL-"],
-button,
-input,
-select,
-textarea,
-label,
-span,
-div,
-p,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--app-font-family, 'Montserrat', sans-serif) !important;
+
+/* EVERYTHING inside active menu stays visible */
+
+#sidebar-v2 .active *,
+#sidebar-v2 .router-link-active *,
+.sidebar-v2 .active *,
+.sidebar-v2 .router-link-active *,
+.hl_nav-menu .active *,
+.hl_nav-menu .router-link-active * {
+    color: #FFFFFF !important;
 }
 
 
 /* =========================================================
-   SIDEBAR
-   ========================================================= */
-
-.GHL-Side-Menu-Wrapper {
-  background:
-    linear-gradient(
-      180deg,
-      #052B49 0%,
-      #07365B 45%,
-      #0B527F 100%
-    ) !important;
-
-  border-right: none !important;
-
-  box-shadow:
-    4px 0 18px rgba(5, 43, 73, 0.13) !important;
-}
-
-
-/* Sidebar navigation text */
-
-.GHL-Side-Menu-Wrapper a,
-.GHL-Side-Menu-Wrapper span,
-.GHL-Side-Menu-Wrapper li {
-  color: #FFFFFF;
-}
-
-
-/* Hover */
-
-.GHL-Side-Menu-Wrapper .menu-item:hover,
-.GHL-Side-Menu-Wrapper li:hover {
-  background: rgba(255, 255, 255, 0.10) !important;
-
-  border-radius: 8px !important;
-}
-
-
-/* Active Navigation */
-
-.GHL-Side-Menu-Wrapper .menu-item.active,
-.GHL-Side-Menu-Wrapper li.active,
-.GHL-Side-Menu-Wrapper .router-link-active {
-
-  background:
-    linear-gradient(
-      135deg,
-      #F58220,
-      #FF9A3C
-    ) !important;
-
-  color: #FFFFFF !important;
-
-  border-radius: 9px !important;
-
-  box-shadow:
-    0 5px 14px rgba(245, 130, 32, 0.28) !important;
-}
-
-
-/* Make active item text/icons white */
-
-.GHL-Side-Menu-Wrapper .menu-item.active *,
-.GHL-Side-Menu-Wrapper li.active *,
-.GHL-Side-Menu-Wrapper .router-link-active * {
-  color: #FFFFFF !important;
-}
-
-
-/* =========================================================
-   LOGO AREA
+   4. LOGO AREA
    ========================================================= */
 
 /*
-   The Ottawa logo contains dark blue text.
-   Putting it directly on the dark sidebar can make parts disappear.
-   This gives the logo a clean light plate.
+   Your logo contains dark blue.
+   It needs a light panel behind it.
 */
 
-.GHL-Side-Menu-Wrapper [class*="logo"],
-.GHL-Side-Menu-Wrapper [class*="Logo"] {
+#sidebar-v2 [class*="logo"],
+#sidebar-v2 [class*="Logo"],
+.sidebar-v2 [class*="logo"],
+.sidebar-v2 [class*="Logo"],
+.hl_nav-header [class*="logo"],
+.hl_nav-header [class*="Logo"] {
+    background: #FFFFFF !important;
 
-  background-color: #FFFFFF;
+    border-radius: 10px !important;
 
-  border-radius: 10px;
+    margin: 10px 10px 12px !important;
 
-  padding: 8px 10px;
+    padding: 10px 12px !important;
 
-  margin: 10px 12px;
+    min-height: 67px !important;
 
-  box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.10);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* Make logo significantly larger */
+
+#sidebar-v2 [class*="logo"] img,
+#sidebar-v2 [class*="Logo"] img,
+.sidebar-v2 [class*="logo"] img,
+.sidebar-v2 [class*="Logo"] img,
+.hl_nav-header img {
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 145px !important;
+    max-height: 58px !important;
+
+    object-fit: contain !important;
 }
 
 
 /* =========================================================
-   TOP HEADER
+   5. TOP NAVIGATION / HEADER
    ========================================================= */
 
-header,
-[class*="topbar"],
-[class*="Topbar"],
-[class*="top-bar"] {
+/*
+   This is the white strip you're seeing across the top.
+*/
 
-  background: #FFFFFF !important;
+header[class*="header"],
+div[class*="topbar"],
+div[class*="top-bar"],
+div[class*="topNav"],
+div[class*="top-nav"],
+.hl_header,
+.hl_header--controls {
+    background: #FFFFFF !important;
 
-  border-bottom:
-    1px solid #E3EAF0 !important;
+    border-bottom: 1px solid #DCE5EB !important;
 
-  box-shadow:
-    0 1px 5px rgba(7, 54, 91, 0.05) !important;
+    box-shadow:
+        0 1px 5px rgba(10, 66, 103, 0.06) !important;
+}
+
+
+/*
+   Keep top nav white because it creates better contrast
+   with your blue/orange sidebar.
+
+   If you WANT the top nav navy too, use the optional
+   section at the bottom instead.
+*/
+
+
+/* =========================================================
+   6. DASHBOARD TOP CONTROLS
+   ========================================================= */
+
+/* Dashboard selector / buttons */
+
+button,
+.btn {
+    font-weight: 500 !important;
+}
+
+
+/* GHL blue controls */
+
+button[class*="primary"],
+.btn-primary {
+    background: #176AA3 !important;
+    border-color: #176AA3 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* Force text inside buttons to remain visible */
+
+button[class*="primary"] *,
+.btn-primary *,
+button.bg-primary *,
+.bg-primary button *,
+button[class*="blue"] * {
+    color: #FFFFFF !important;
 }
 
 
 /* =========================================================
-   PAGE BACKGROUND
+   7. ORANGE PRIMARY ACTION
    ========================================================= */
 
-body {
-  background: #F4F7FA !important;
+/*
+   Edit Dashboard and primary CTA style
+*/
+
+button[class*="warning"],
+.btn-warning,
+button[class*="orange"] {
+    background: #F58220 !important;
+    border-color: #F58220 !important;
+    color: #FFFFFF !important;
+}
+
+button[class*="warning"] *,
+.btn-warning *,
+button[class*="orange"] * {
+    color: #FFFFFF !important;
 }
 
 
 /* =========================================================
-   BUTTONS
+   8. DASHBOARD TEXT — FIX VISIBILITY
    ========================================================= */
 
-button.btn-primary,
-.btn-primary,
-button[class*="primary"] {
+/*
+   Previous global styles can cause text inheritance issues.
+   Force main dashboard text to Ottawa navy.
+*/
 
-  background:
-    linear-gradient(
-      135deg,
-      #F58220,
-      #FF9635
-    ) !important;
+main,
+main div,
+main span,
+main p,
+main label,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
 
-  border-color: #F58220 !important;
-
-  color: #FFFFFF !important;
-
-  border-radius: 8px !important;
-
-  font-weight: 600 !important;
-
-  box-shadow:
-    0 4px 10px rgba(245, 130, 32, 0.20) !important;
+#app main,
+#app main div,
+#app main span,
+#app main p {
+    color: #102A43;
 }
 
 
-button.btn-primary:hover,
-.btn-primary:hover {
+/*
+ IMPORTANT:
+ Re-override buttons because main div/span selectors above
+ can otherwise make button text dark.
+*/
 
-  background: #E56F0A !important;
-
-  border-color: #E56F0A !important;
+main button,
+main button span,
+main button div,
+main .btn,
+main .btn span {
+    color: inherit !important;
 }
 
 
 /* =========================================================
-   INPUTS / DROPDOWNS
+   9. DASHBOARD SECTION HEADERS
    ========================================================= */
 
-input,
-select,
-textarea {
+/*
+   Your turquoise "Performance Overview" area doesn't match
+   the Ottawa brand. Change it to blue.
+*/
 
-  border:
-    1px solid #D9E3EC !important;
-
-  border-radius: 8px !important;
-
-  color: #102A43 !important;
-
-  background: #FFFFFF !important;
-}
-
-
-input:focus,
-select:focus,
-textarea:focus {
-
-  border-color: #176AA3 !important;
-
-  box-shadow:
-    0 0 0 3px rgba(23, 106, 163, 0.12) !important;
-
-  outline: none !important;
+main [class*="section-header"],
+main [class*="widget-header"],
+main [class*="title-bar"] {
+    background: #176AA3 !important;
+    color: #FFFFFF !important;
 }
 
 
 /* =========================================================
-   CARDS / DASHBOARD WIDGETS
+   10. CARDS
    ========================================================= */
 
-[class*="card"],
-[class*="widget"] {
+main [class*="card"],
+main [class*="widget"] {
+    background: #FFFFFF !important;
 
-  border:
-    1px solid #E6EDF3;
+    border-color: #DFE8EE !important;
 
-  border-radius: 12px;
+    border-radius: 10px !important;
 
-  box-shadow:
-    0 3px 12px rgba(7, 54, 91, 0.05);
+    box-shadow:
+        0 2px 8px rgba(10, 66, 103, 0.05) !important;
 }
 
 
 /* =========================================================
-   LINKS
+   11. SEARCH BOX IN SIDEBAR
    ========================================================= */
 
-a {
-  color: #176AA3;
+#sidebar-v2 input,
+.sidebar-v2 input,
+.hl_nav-menu input {
+    background: rgba(255, 255, 255, 0.12) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+
+    color: #FFFFFF !important;
 }
 
-a:hover {
-  color: #F58220;
+#sidebar-v2 input::placeholder,
+.sidebar-v2 input::placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 
 
 /* =========================================================
-   TABLES
+   12. ACCOUNT / LOCATION SELECTOR
    ========================================================= */
 
-table thead {
-
-  background: #F3F7FA !important;
-
-  color: #07365B !important;
-}
-
-
-table tbody tr:hover {
-
-  background: #F7FAFC !important;
+#sidebar-v2 [class*="location"],
+#sidebar-v2 [class*="account"],
+.sidebar-v2 [class*="location"],
+.sidebar-v2 [class*="account"] {
+    color: #FFFFFF !important;
 }
 
 
 /* =========================================================
-   STATUS / KPI COLORS
+   13. BRAND ORANGE ACCENTS
    ========================================================= */
 
-.status-success,
-.text-success {
-
-  color: #16895A !important;
+main a:hover {
+    color: #F58220 !important;
 }
 
+main input:focus,
+main select:focus,
+main textarea:focus {
+    border-color: #176AA3 !important;
 
-.status-warning,
-.text-warning {
-
-  color: #F58220 !important;
-}
-
-
-.status-danger,
-.text-danger {
-
-  color: #D64545 !important;
-}
-
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: #EEF3F7;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #A9BDCC;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #176AA3;
-}
-
-
-/* =========================================================
-   SELECTION
-   ========================================================= */
-
-::selection {
-  background: #F58220;
-  color: #FFFFFF;
+    box-shadow:
+        0 0 0 3px rgba(23, 106, 163, 0.12) !important;
 }
