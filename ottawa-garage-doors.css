@@ -1,4 +1,53 @@
 /* =========================================================
+   OTTAWA GARAGE DOORS — COMPLETE LOCATION THEME
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/ghlstyle-d-custom-theme.css');
+
+:root {
+
+    /* BRAND */
+    --brand-primary-color: #0A4267 !important;
+    --brand-secondary-color: #176AA3 !important;
+    --brand-acent-color: #F58220 !important;
+
+    --app-font-family: Montserrat !important;
+
+    /* GHL */
+    --ghl-sidebar-color: #0A4267 !important;
+    --ghl-topbar-color: #FFFFFF !important;
+
+    --menu-hover-color: #14577F !important;
+    --menu-active-color: #F58220 !important;
+
+    --sidebar-bottom-toggle: #14577F !important;
+
+    --menu-text-color: #FFFFFF !important;
+    --ghl-topbar-text-color: #0A4267 !important;
+
+    --ghl-widgets-color: #176AA3 !important;
+    --ghl-widgets-bg-color: #FFFFFF !important;
+
+    --ghl-dashboard-icon-color: #176AA3 !important;
+    --ghl-widgets-icon-color: #176AA3 !important;
+    --ghl-topbar-icon-color: #176AA3 !important;
+}
+
+
+/* MAIN FONT */
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+/* =========================================================
    OTTAWA GARAGE DOORS — GHL UI FIXES
    ADD THIS AT THE VERY BOTTOM OF THE CSS FILE
    ========================================================= */
