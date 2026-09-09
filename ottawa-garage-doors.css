@@ -1,0 +1,501 @@
+/* =========================================================
+   OTTAWA GARAGE DOORS & OPENERS
+   GoHighLevel / AI Dashboard Custom Theme
+   ========================================================= */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/ghlstyle-d-custom-theme.css');
+
+
+/* =========================================================
+   ICON FONT
+   ========================================================= */
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('/ghl-tool/core/style-core/fonts/icomoon.eot');
+  src: url('/ghl-tool/core/style-core/fonts/icomoon.eot') format('embedded-opentype'),
+       url('/ghl-tool/core/style-core/fonts/icomoon.ttf') format('truetype'),
+       url('/ghl-tool/core/style-core/fonts/icomoon.woff') format('woff'),
+       url('/ghl-tool/core/style-core/fonts/icomoon.svg') format('svg'),
+       url('https://cdn.jsdelivr.net/gh/ghlstyle/d-theme@latest/fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Layout:before { content: "\e906"; }
+.icon-Bell:before { content: "\e900"; }
+.icon-CalendarDots:before { content: "\e901"; }
+.icon-CaretCircleRight:before { content: "\e902"; }
+.icon-downArrow:before { content: "\e903"; }
+.icon-flash:before { content: "\e904"; }
+.icon-GearSix:before { content: "\e905"; }
+.icon-MapPinArea:before { content: "\e907"; }
+.icon-menuDott:before { content: "\e908"; }
+.icon-Pen:before { content: "\e909"; }
+.icon-Phone:before { content: "\e90a"; }
+.icon-RightArrow:before { content: "\e90b"; }
+.icon-search:before { content: "\e90c"; }
+.icon-SlidersHorizontal:before { content: "\e90d"; }
+.icon-updownArrow:before { content: "\e90e"; }
+
+.GHL-Side-Menu-Wrapper [class^="icon-"],
+.GHL-Side-Menu-Wrapper [class*=" icon-"],
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+}
+
+
+/* =========================================================
+   OTTAWA GARAGE DOORS BRAND VARIABLES
+   ========================================================= */
+
+:root {
+
+  /* LOGO */
+  --brand-logo: url("https://assets.cdn.filesafe.space/4yJrZN5BDbV5Nbimq40T/media/6aa16e2b9416bfd5312a5305.png");
+
+  /* Main Brand Colors */
+  --ottawa-navy: #07365B;
+  --ottawa-dark-navy: #052B49;
+  --ottawa-blue: #176AA3;
+  --ottawa-light-blue: #2D8AC4;
+
+  --ottawa-orange: #F58220;
+  --ottawa-orange-hover: #E56F0A;
+  --ottawa-orange-light: #FFF1E4;
+
+  --ottawa-white: #FFFFFF;
+  --ottawa-bg: #F4F7FA;
+  --ottawa-border: #E3EAF0;
+  --ottawa-text: #102A43;
+  --ottawa-muted: #6B7C8F;
+
+  /* Theme Variables */
+  --brand-primary-color: #07365B;
+  --brand-secondary-color: #176AA3;
+  --brand-acent-color: #F58220;
+
+  --app-font-family: Montserrat;
+
+  /* Top Bar */
+  --ghl-topbar-color: #FFFFFF;
+  --ghl-topbar-text-color: #07365B;
+  --ghl-topbar-icon-color: #176AA3;
+
+  /* Sidebar */
+  --ghl-sidebar-color: #07365B;
+  --menu-hover-color: #124E78;
+  --menu-active-color: #F58220;
+  --sidebar-bottom-toggle: #124E78;
+  --menu-text-color: #FFFFFF;
+
+  /* Widgets */
+  --ghl-widgets-color: #07365B;
+  --ghl-widgets-bg-color: #FFFFFF;
+  --ghl-widgets-text-color: #102A43;
+  --ghl-widgets-icon-color: #176AA3;
+  --ghl-dashboard-icon-color: #176AA3;
+
+
+  /* Menu Text */
+  --Launch-Pad-Text: "Launch Pad";
+  --Dashboard-Text: "Dashboard";
+  --Conversations-Text: "Conversations";
+  --Calendar-Text: "Calendar";
+  --Contacts-Text: "Contacts";
+  --Opportunities-Text: "Opportunities";
+  --Payments-Text: "Payments";
+  --AI-Agents-Text: "AI Agents";
+  --Marketing-Text: "Marketing";
+  --Automations-Text: "Automations";
+  --Sites-Text: "Sites";
+  --Memberships-Text: "Memberships";
+  --Media-Storage-Text: "Media Storage";
+  --Reputation-Text: "Reputation";
+  --Reporting-Text: "Reporting";
+  --App-Marketplace-Text: "App Marketplace";
+  --Mobile-App-Text: "Mobile App";
+  --Settings-Text: "Settings";
+
+
+  /* Icons */
+  --launch-pad-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/RocketLaunch_tnxjuq.png);
+  --dashboard-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/ChartDonut_xvomxc.png);
+  --conversations-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Chats_evuom2.png);
+  --calendars-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/CalendarDots_l5tpxr.png);
+  --contacts-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/IdentificationCard_aq9t7m.png);
+  --opportunities-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/HandCoins_hd3giq.png);
+  --payments-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/CurrencyDollarSimple_p2lp03.png);
+  --ai-agents-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745638645/AI_Agents_b9zrtr.png);
+  --marketing-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Megaphone_ywe4yq.png);
+  --automations-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/GearFine_muf3ps.png);
+  --sites-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/Browser_jbi5vh.png);
+  --memberships-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/Certificate_iyrcno.png);
+  --media-storage-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/ImagesSquare_wghzea.png);
+  --reputation-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/ListStar_swgiix.png);
+  --reporting-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/ChartBar_vpzouh.png);
+  --app-marketplace-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/SquaresFour_tdk36i.png);
+  --mobile-app-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/DeviceMobileCamera_q526gh.png);
+  --settings-icon: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/ToggleRight_k50xms.png);
+  --icon-dialer: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636989/Phone_jnm2yw.png);
+  --icon-activitie: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636988/Bell_cczvh7.png);
+  --icon-help: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636990/Question_sh2vk0.png);
+  --icon-canny-logs: url(https://res.cloudinary.com/dn3mdxebf/image/upload/v1745636987/GearSix_blhogp.png);
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+* {
+  font-family: var(--app-font-family, 'Montserrat', sans-serif) !important;
+}
+
+.GHL-Side-Menu-Wrapper *,
+.GHL-Side-Menu-Wrapper span,
+.GHL-Side-Menu-Wrapper a,
+.GHL-Side-Menu-Wrapper div,
+.GHL-Side-Menu-Wrapper li,
+.GHL-Side-Menu-Nav *,
+.menu-item *,
+.desktop--12-682 .GHL-Side-Menu-Wrapper *,
+.desktop--12-682 .menu-item *,
+.desktop--12-682 li *,
+[class*="menu-"],
+[class*="sidebar-"],
+[class*="GHL-"],
+button,
+input,
+select,
+textarea,
+label,
+span,
+div,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--app-font-family, 'Montserrat', sans-serif) !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.GHL-Side-Menu-Wrapper {
+  background:
+    linear-gradient(
+      180deg,
+      #052B49 0%,
+      #07365B 45%,
+      #0B527F 100%
+    ) !important;
+
+  border-right: none !important;
+
+  box-shadow:
+    4px 0 18px rgba(5, 43, 73, 0.13) !important;
+}
+
+
+/* Sidebar navigation text */
+
+.GHL-Side-Menu-Wrapper a,
+.GHL-Side-Menu-Wrapper span,
+.GHL-Side-Menu-Wrapper li {
+  color: #FFFFFF;
+}
+
+
+/* Hover */
+
+.GHL-Side-Menu-Wrapper .menu-item:hover,
+.GHL-Side-Menu-Wrapper li:hover {
+  background: rgba(255, 255, 255, 0.10) !important;
+
+  border-radius: 8px !important;
+}
+
+
+/* Active Navigation */
+
+.GHL-Side-Menu-Wrapper .menu-item.active,
+.GHL-Side-Menu-Wrapper li.active,
+.GHL-Side-Menu-Wrapper .router-link-active {
+
+  background:
+    linear-gradient(
+      135deg,
+      #F58220,
+      #FF9A3C
+    ) !important;
+
+  color: #FFFFFF !important;
+
+  border-radius: 9px !important;
+
+  box-shadow:
+    0 5px 14px rgba(245, 130, 32, 0.28) !important;
+}
+
+
+/* Make active item text/icons white */
+
+.GHL-Side-Menu-Wrapper .menu-item.active *,
+.GHL-Side-Menu-Wrapper li.active *,
+.GHL-Side-Menu-Wrapper .router-link-active * {
+  color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   LOGO AREA
+   ========================================================= */
+
+/*
+   The Ottawa logo contains dark blue text.
+   Putting it directly on the dark sidebar can make parts disappear.
+   This gives the logo a clean light plate.
+*/
+
+.GHL-Side-Menu-Wrapper [class*="logo"],
+.GHL-Side-Menu-Wrapper [class*="Logo"] {
+
+  background-color: #FFFFFF;
+
+  border-radius: 10px;
+
+  padding: 8px 10px;
+
+  margin: 10px 12px;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+header,
+[class*="topbar"],
+[class*="Topbar"],
+[class*="top-bar"] {
+
+  background: #FFFFFF !important;
+
+  border-bottom:
+    1px solid #E3EAF0 !important;
+
+  box-shadow:
+    0 1px 5px rgba(7, 54, 91, 0.05) !important;
+}
+
+
+/* =========================================================
+   PAGE BACKGROUND
+   ========================================================= */
+
+body {
+  background: #F4F7FA !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button.btn-primary,
+.btn-primary,
+button[class*="primary"] {
+
+  background:
+    linear-gradient(
+      135deg,
+      #F58220,
+      #FF9635
+    ) !important;
+
+  border-color: #F58220 !important;
+
+  color: #FFFFFF !important;
+
+  border-radius: 8px !important;
+
+  font-weight: 600 !important;
+
+  box-shadow:
+    0 4px 10px rgba(245, 130, 32, 0.20) !important;
+}
+
+
+button.btn-primary:hover,
+.btn-primary:hover {
+
+  background: #E56F0A !important;
+
+  border-color: #E56F0A !important;
+}
+
+
+/* =========================================================
+   INPUTS / DROPDOWNS
+   ========================================================= */
+
+input,
+select,
+textarea {
+
+  border:
+    1px solid #D9E3EC !important;
+
+  border-radius: 8px !important;
+
+  color: #102A43 !important;
+
+  background: #FFFFFF !important;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  border-color: #176AA3 !important;
+
+  box-shadow:
+    0 0 0 3px rgba(23, 106, 163, 0.12) !important;
+
+  outline: none !important;
+}
+
+
+/* =========================================================
+   CARDS / DASHBOARD WIDGETS
+   ========================================================= */
+
+[class*="card"],
+[class*="widget"] {
+
+  border:
+    1px solid #E6EDF3;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(7, 54, 91, 0.05);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: #176AA3;
+}
+
+a:hover {
+  color: #F58220;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table thead {
+
+  background: #F3F7FA !important;
+
+  color: #07365B !important;
+}
+
+
+table tbody tr:hover {
+
+  background: #F7FAFC !important;
+}
+
+
+/* =========================================================
+   STATUS / KPI COLORS
+   ========================================================= */
+
+.status-success,
+.text-success {
+
+  color: #16895A !important;
+}
+
+
+.status-warning,
+.text-warning {
+
+  color: #F58220 !important;
+}
+
+
+.status-danger,
+.text-danger {
+
+  color: #D64545 !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EEF3F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A9BDCC;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #176AA3;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: #F58220;
+  color: #FFFFFF;
+}
